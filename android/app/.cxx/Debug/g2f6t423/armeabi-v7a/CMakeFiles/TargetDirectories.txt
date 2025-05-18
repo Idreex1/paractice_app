@@ -1,0 +1,2 @@
+C:/paractice_app1/android/app/.cxx/Debug/g2f6t423/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/paractice_app1/android/app/.cxx/Debug/g2f6t423/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+C:/paractice_app1/android/app/.cxx/Debug/6s6h3t2e/x86/CMakeFiles/edit_cache.dir
+C:/paractice_app1/android/app/.cxx/Debug/6s6h3t2e/x86/CMakeFiles/rebuild_cache.dir

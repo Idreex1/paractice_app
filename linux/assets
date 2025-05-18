@@ -1,0 +1,4 @@
+<script>start("c:\\my_app\\assets\\");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("animations","animations",1,0,"0 B",1744632604,"4/14/25, 5:10:04 PM");</script>
+<script>addRow("images","images",1,0,"0 B",1744632587,"4/14/25, 5:09:47 PM");</script>
