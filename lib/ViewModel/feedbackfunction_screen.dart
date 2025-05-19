@@ -11,7 +11,7 @@ class FeedbackController extends GetxController {
 
   // Feedback options with unique values
   final List<String> feedbackOptions = [
-    'Poor Effect',
+    'Poor Effectt',
     'Average Quality',
     'Face Detail Issues',
     'Color Accuracy',

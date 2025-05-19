@@ -10,7 +10,7 @@ class Listgetx extends StatelessWidget {
     FavrioteFruits controller = Get.put(FavrioteFruits());
     return Scaffold(
       appBar: AppBar(
-        title: Text('List  View In GetX'),
+        title: Text('List  View In '),
       ),
       body: ListView.builder(
         itemCount: controller.fruits.length,

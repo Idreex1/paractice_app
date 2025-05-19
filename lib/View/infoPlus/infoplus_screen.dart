@@ -9,7 +9,7 @@ class InfoPlusScreen extends StatefulWidget {
 }
 
 class _InfoPlusScreenState extends State<InfoPlusScreen> {
-  String _packageInfoText = 'Loading app information...';
+  String _packageInfoText = 'Loading app information.....';
   bool _isLoading = true;
 
   @override
