@@ -4,9 +4,9 @@ import 'package:paractice_app1/Model/View/hive_model.dart';
 import 'package:paractice_app1/View/Hive/hive_view.dart';
 import 'package:paractice_app1/View/home/home_screen.dart';
 import 'package:paractice_app1/View/localization/localization_screen.dart';
-import 'package:paractice_app1/View/splash/splash_screen.dart';
+import 'package:paractice_app1/View/splashPage/splash_screen.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:hive/hive.dart';
+
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';

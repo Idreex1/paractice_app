@@ -5,6 +5,7 @@ import 'package:paractice_app1/helper/constants/animation_constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Animationpage extends StatelessWidget {
+  
   double height = 170;
 
   double width = 170;

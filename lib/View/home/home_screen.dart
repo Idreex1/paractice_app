@@ -11,16 +11,15 @@ import 'package:paractice_app1/View/feedback/feedback_screen.dart';
 import 'package:paractice_app1/View/infoPlus/infoplus_screen.dart';
 import 'package:paractice_app1/View/photoselect/photoselect_screen.dart';
 import 'package:paractice_app1/View/rating/rating_screen.dart';
-import 'package:paractice_app1/View/tabbar/tabbar_screen.dart';
-import 'package:share_plus/share_plus.dart';
 
+import 'package:share_plus/share_plus.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    PlaystoreClass controller =  Get.put(PlaystoreClass());
+    PlaystoreClass controller = Get.put(PlaystoreClass());
     return Scaffold(
       drawer: Drawer(
         backgroundColor: Colors.black,
@@ -67,8 +66,8 @@ class HomeScreen extends StatelessWidget {
           ),
 //           buildListTile(
 //   icon: Icons.list,
-//   title: 'list_in_getx'.tr,  
-//   route: Routes.LIST_GETX,   
+//   title: 'list_in_getx'.tr,
+//   route: Routes.LIST_GETX,
 // ),
           ListTile(
             leading: Icon(
@@ -96,38 +95,24 @@ class HomeScreen extends StatelessWidget {
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> RatingScreen()));
-
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RatingScreen()));
             },
           ),
           ListTile(
-              leading:
-                  const Icon(Icons.playlist_add_rounded, color: Colors.white),
-              title: Text(
-                'check_play_store'.tr,
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
-              onTap: () {
-                controller.playstore();
-                
-              },
-              ),
-                ListTile(
-              leading: Icon(
-                Icons.tab,
-                color: Colors.white,
-              ),
-              title: Text(
-                'tab_bar'.tr,
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
-              onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => TabBarScreen()));
-              },
+            leading:
+                const Icon(Icons.playlist_add_rounded, color: Colors.white),
+            title: Text(
+              'check_play_store'.tr,
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
-             ListTile(
+            onTap: () {
+              controller.playstore();
+            },
+          ),
+
+          ListTile(
             leading: Icon(
               Icons.info,
               color: Colors.white,
@@ -138,10 +123,11 @@ class HomeScreen extends StatelessWidget {
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             onTap: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context) => InfoPlusScreen()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => InfoPlusScreen()));
             },
           ),
-            ListTile(
+          ListTile(
             leading: Icon(
               Icons.language,
               color: Colors.white,
@@ -152,11 +138,10 @@ class HomeScreen extends StatelessWidget {
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             onTap: () {
-               Get.toNamed('/language', arguments: [
-                 'M',
+              Get.toNamed('/language', arguments: [
+                'M',
                 'Idrees',
-              
-               ]);
+              ]);
             },
           ),
           ListTile(
@@ -170,7 +155,9 @@ class HomeScreen extends StatelessWidget {
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             onTap: () {
-               Get.toNamed('/hive',);
+              Get.toNamed(
+                '/hive',
+              );
             },
           ),
         ]),
@@ -184,7 +171,6 @@ class HomeScreen extends StatelessWidget {
             },
           ),
         ),
-
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -219,12 +205,9 @@ class HomeScreen extends StatelessWidget {
             )
           ],
         ),
-
         backgroundColor: Colors.black,
       ),
-      body: 
-     
-      ListView(padding: EdgeInsets.all(10), children: [
+      body: ListView(padding: EdgeInsets.all(10), children: [
         Column(
           children: [
             Row(children: [
@@ -239,133 +222,135 @@ class HomeScreen extends StatelessWidget {
                                 )));
                   },
                   child: Container(
-  
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(10),
-    color: Color(0xFF144156),
-  ),
-  height: 170,
-  child: Stack(
-    children: [
-      // Lottie animation positioned to the right
-      Positioned(
-        right: 0, // Align to the right
-        top: 0,
-        bottom: 0,
-        
-      
-        child: Lottie.asset(
-          AnimationConstant.splash_premium_anim2,
-          fit: BoxFit.cover, // Ensures proper sizing
-        ),
-      ),
-      
-      // Content column
-      Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 10, top: 10),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  backgroundColor: Color(0xFF248DBC),
-                  radius: 20,
-                  child: Icon(
-                    Icons.person,
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(width: 15),
-                Container(
-                  width: 80,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(
-                      color: const Color.fromARGB(255, 86, 82, 82),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xFF144156),
+                    ),
+                    height: 170,
+                    child: Stack(
+                      children: [
+                        // Lottie animation positioned to the right
+                        Positioned(
+                          right: 0, // Align to the right
+                          top: 0,
+                          bottom: 0,
+
+                          child: Lottie.asset(
+                            AnimationConstant.splash_premium_anim2,
+                            fit: BoxFit.cover, // Ensures proper sizing
+                          ),
+                        ),
+
+                        // Content column
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
+                              child: Row(
+                                children: [
+                                  CircleAvatar(
+                                    backgroundColor: Color(0xFF248DBC),
+                                    radius: 20,
+                                    child: Icon(
+                                      Icons.person,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(width: 15),
+                                  Container(
+                                    width: 80,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      border: Border.all(
+                                        color: const Color.fromARGB(
+                                            255, 86, 82, 82),
+                                      ),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.fireplace_outlined,
+                                          color: Color(0xFFFC8915),
+                                        ),
+                                        Column(
+                                          children: [
+                                            Text(
+                                              'streak_count'.tr,
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            Text(
+                                              'streak'.tr,
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 8),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'title'.tr,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 3),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'now_check_features'.tr,
+                                    style: TextStyle(
+                                      color: const Color.fromARGB(
+                                          179, 233, 226, 226),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 3),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'score_and_rating'.tr,
+                                    style: TextStyle(
+                                      color: const Color.fromARGB(
+                                          179, 233, 226, 226),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.fireplace_outlined,
-                        color: Color(0xFFFC8915),
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'streak_count'.tr,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            'streak'.tr,
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
-          SizedBox(height: 8),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'title'.tr,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-              ],
-            ),
-          ),
-          SizedBox(height: 3),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'now_check_features'.tr,
-                  style: TextStyle(
-                    color: const Color.fromARGB(179, 233, 226, 226),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 3),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'score_and_rating'.tr,
-                  style: TextStyle(
-                    color: const Color.fromARGB(179, 233, 226, 226),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    ],
-  ),
-),
                 ),
               ),
             ]),
@@ -396,13 +381,13 @@ class HomeScreen extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xFF313213), 
+                        color: Color(0xFF313213),
                         // #313213
                       ),
                       height: 170,
                       width: 250,
                       child: Padding(
-                          padding: const EdgeInsets.only(left:  10, top: 10),
+                        padding: const EdgeInsets.only(left: 10, top: 10),
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -419,7 +404,9 @@ class HomeScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               Padding(
-                                  padding: const EdgeInsets.only(left:  10,),
+                                padding: const EdgeInsets.only(
+                                  left: 10,
+                                ),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
@@ -437,7 +424,7 @@ class HomeScreen extends StatelessWidget {
                                 height: 5,
                               ),
                               Padding(
-                                  padding: const EdgeInsets.only(left:  10),
+                                padding: const EdgeInsets.only(left: 10),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
@@ -455,9 +442,10 @@ class HomeScreen extends StatelessWidget {
                                 height: 5,
                               ),
                               Padding(
-                                  padding: const EdgeInsets.only(left:  10),
+                                padding: const EdgeInsets.only(left: 10),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
                                       'out_background'.tr,
@@ -501,11 +489,10 @@ class HomeScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                                padding: const EdgeInsets.only(left: 10,top: 10),
+                              padding: const EdgeInsets.only(left: 10, top: 10),
                               child: CircleAvatar(
                                 radius: 20,
-                                backgroundColor:
-                                    Color(0xff2E7853),
+                                backgroundColor: Color(0xff2E7853),
                                 child: Icon(
                                   Icons.line_axis_outlined,
                                   color: Colors.white,
@@ -516,7 +503,7 @@ class HomeScreen extends StatelessWidget {
                               height: 20,
                             ),
                             Padding(
-                                padding: const EdgeInsets.only(left:  10),
+                              padding: const EdgeInsets.only(left: 10),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
@@ -534,7 +521,7 @@ class HomeScreen extends StatelessWidget {
                               height: 5,
                             ),
                             Padding(
-                                padding: const EdgeInsets.only(left:  10),
+                              padding: const EdgeInsets.only(left: 10),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
@@ -552,9 +539,10 @@ class HomeScreen extends StatelessWidget {
                               height: 5,
                             ),
                             Padding(
-                                padding: const EdgeInsets.only(left:  10),
+                              padding: const EdgeInsets.only(left: 10),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'out_background'.tr,
@@ -626,11 +614,9 @@ class HomeScreen extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: 10),
                               child: Row(
-                               
                                 children: [
                                   CircleAvatar(
-                                    backgroundColor:
-                                        Color(0xff6464CC),
+                                    backgroundColor: Color(0xff6464CC),
                                     radius: 20,
                                     child: Icon(
                                       Icons.person,
@@ -698,7 +684,7 @@ class HomeScreen extends StatelessWidget {
                       width: 260,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                       color: Color(0xff101B1F),
+                        color: Color(0xff101B1F),
                       ),
                       child: Stack(children: [
                         Lottie.asset(AnimationConstant.splash_premium_anim2),
@@ -708,11 +694,9 @@ class HomeScreen extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: 10),
                               child: Row(
-                                
                                 children: [
                                   CircleAvatar(
-                                    backgroundColor:
-                                        Color(0xffCC9157),
+                                    backgroundColor: Color(0xffCC9157),
                                     radius: 20,
                                     child: Icon(
                                       Icons.person,
