@@ -12,7 +12,21 @@ class Github extends StatelessWidget {
         title: Text("Git Hub"),
       ),
       body: Center(
-        child: Text("Git Hub"),
+        child: Column(
+          children: [
+            Text(
+              "Git Hub",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Git Hub",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }
